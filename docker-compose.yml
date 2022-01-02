@@ -1,16 +1,28 @@
-###########################################################
+#######################################################################
 # File name : docker-compose.yml
-# Author : Olivier Galand (31/12/2022)
+# Author : Olivier Galand (31/12/2021)
 # Author email : galand.olivier.david@gmail.com
 # Project : CashFactory
 # Project repository : https://github.com/OlivierGaland/CashFactory
 # 
 # Docker-compose file of CashFactory
-###########################################################
+#######################################################################
 version: '3.5'
 
 services:
-    #Start of Portainer section : For easy management and monitoring of containers : connect to your device port 9000
+    #Start of Portainer + Webserver section :
+    # Web GUI with quicklinks to apps dashboards and help : connect to your device port 80 (Webserver)
+    # Container management and monitoring : connect to your device port 9000 (Portainer)
+    Webserver:
+        image: fnichol/uhttpd
+        volumes:
+            - ./www:/www
+        ports:
+            - 80:80
+        restart: always
+        networks:
+            default:
+                ipv4_address: 172.106.0.10
     Portainer:
         image: portainer/portainer-ce:latest
         volumes:
@@ -23,11 +35,14 @@ services:
         restart: always
         networks:
             default:
-                ipv4_address: 172.106.0.10
-    #End of Portainer section
+                ipv4_address: 172.106.0.11
+    #End of Portainer + Webserver section
 
     #Start of Earnapp section (remove this if Earnapp not wanted)
     Earnapp:
+        depends_on:
+            - Portainer
+            - Webserver
         image: fazalfarhan01/earnapp
         volumes:
             - /sys/fs/cgroup:/sys/fs/cgroup:ro
@@ -45,6 +60,9 @@ services:
     # HONEYGAIN_PASSWD : Your Honeygain account password 
     # DEVICE_NAME : This computer name (for display on dashboard)
     Honeygain:
+        depends_on:
+            - Portainer
+            - Webserver
         image: honeygain/honeygain
         command: -tou-accept -email $HONEYGAIN_EMAIL -pass '$HONEYGAIN_PASSWD' -device $DEVICE_NAME
         restart: always
@@ -59,6 +77,9 @@ services:
     # IPROYALPAWNS_PASSWD : Your IproyalPawns account password 
     # DEVICE_NAME : This computer name (for display on dashboard)
     IproyalPawns:
+        depends_on:
+            - Portainer
+            - Webserver
         image: iproyalpawns/pawns-cli:latest
         command: -email=$IPROYALPAWNS_EMAIL -password='$IPROYALPAWNS_PASSWD' -device-name=$DEVICE_NAME -accept-tos
         restart: always
@@ -71,6 +92,9 @@ services:
     # variables to define in .env file :
     # PEER2PROFIT_EMAIL : Your Peer2profit account email
     Peer2profit:
+        depends_on:
+            - Portainer
+            - Webserver
         image: peer2profit/peer2profit_x86_64:latest
         restart: always
         environment:
@@ -84,6 +108,9 @@ services:
     # variables to define in .env file :
     # PACKETSTREAM_CID : Your Packetstream CID (available in packetstream dashboard)
     Packetstream_PsClient:
+        depends_on:
+            - Portainer
+            - Webserver
         image: packetstream/psclient:latest
         restart: always
         environment:
@@ -92,6 +119,10 @@ services:
             default:
                 ipv4_address: 172.106.0.60
     Packetstream_Watchtower:
+        depends_on:
+            - Portainer
+            - Webserver
+            - Packetstream_PsClient
         image: containrrr/watchtower
         command: --cleanup --include-stopped --revive-stopped --interval 60 ${_COMPOSE_PROJECT_NAME}_Packetstream_PsClient_${_COMPOSE_PROJECT_STACK_ID}
         volumes:

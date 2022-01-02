@@ -1,5 +1,5 @@
 # CashFactory
-Lightweight docker image running many passive income applications (proxy and bandwidth share) : Honeygain , EarnApp , IPRoyal Pawns , PacketStream , Peer2Profit
+Lightweight docker image running many passive income applications (proxy and bandwidth share) : Honeygain , EarnApp , IPRoyal Pawns , PacketStream , Peer2Profit . 
 Expected raw revenue is around $30-$40 per month (Jan 2022 estimation), 24/7 power cost to deduce.
 
 Installation (you can open www/index.html file to have a more interactive install section) :
