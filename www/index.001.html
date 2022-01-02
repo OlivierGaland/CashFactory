@@ -1,0 +1,79 @@
+
+<html>
+	<head>
+		<meta name="robots" content="noindex">
+		<link rel="icon" type="image/png" href="pic/favicon.png" />
+		<link rel="stylesheet" type="text/css" href="css/theme.css">
+		<title>CashFactory</title>
+	</head>
+	<body><center>
+        <table class="base">
+			<tr>
+				<td class="top">
+					<div class="tab">
+						<table class="menu">
+							<tr><td><button type="button" class="tablinks" onclick="openTab(event, 'Bookmarks')" id="defaultTab">Bookmarks</button></tr></td>
+							<tr><td><button type="button" class="tablinks" onclick="openTab(event, 'Register')" id="factoryDefaultTab">Register</button></tr></td>
+							<tr><td><button type="button" class="tablinks" onclick="openTab(event, 'Help')">Help</button></tr></td>
+							<tr><td><button type="button" class="tablinks" onclick="openTab(event, 'About')">About</button></tr></td>
+						</table>
+					</div>
+				</td>
+				<td class="top">
+					<div id="Bookmarks" class="tabcontent">
+						<table class="info">
+							<tr><td><button type="button" onclick="javascript:event.target.port=9000; window.open('/')">Portainer</button></tr></td>
+							<tr><td><button type="button" onclick="window.open('https://dashboard.honeygain.com/')">Honeygain</button></tr></td>
+							<tr><td><button type="button" onclick="window.open('https://earnapp.com/dashboard')">EarnApp</button></tr></td>
+							<tr><td><button type="button" onclick="window.open('https://pawns.iproyal.com/')">IPRoyal Pawns</button></tr></td>
+							<tr><td><button type="button" onclick="window.open('https://packetstream.io/dashboard')">Packetstream</button></tr></td>
+							<tr><td><button type="button" onclick="window.open('https://peer2profit.com/dashboard')">Peer2profit</button></tr></td>
+							<tr><td><button type="button" onclick="window.open('https://income.spider.dev/dashboard')">Spider Income</button></tr></td>
+						</table>
+                    </div>
+					<div id="Register" class="tabcontent">
+						<table class="info">
+							<tr><td>Honeygain</td><td><button type="button" onclick="window.open('https://r.honeygain.me/GALAN2C368')">Register</button></tr></td>
+							<tr><td>EarnApp</td><td><button type="button" onclick="window.open('https://earnapp.com/i/p34wpf4')">Register</button></tr></td>
+							<tr><td>IPRoyal Pawns</td><td><button type="button" onclick="window.open('https://iproyal.com/pawns?r=455236')">Register</button></tr></td>
+							<tr><td>Packetstream</td><td><button type="button" onclick="window.open('https://packetstream.io/?psr=32GQ')">Register</button></tr></td>
+							<tr><td>Peer2profit</td><td><button type="button" onclick="window.open('https://peer2profit.com/r/164081436561ccd71d961f2/en')">Register</button></tr></td>
+							<tr><td>Spider Income</td><td><button type="button" onclick="window.open('https://income.spider.dev/r/galan21l65')">Register</button></tr></td>
+						</table>
+                    </div>
+					<div id="Help" class="tabcontent">
+                        HELP
+                    </div>
+					<div id="About" class="tabcontent">
+                        CashFactory beta 0.1 (2022)
+                    </div>
+				</td>
+			</tr>
+		</table>
+        
+		<!--<script src="java/jquery-3.2.1.min.js"></script>  -->      
+        
+		<script>
+            function openTab(evt, tabName) {
+                var i, tabcontent, tablinks;
+                tabcontent = document.getElementsByClassName("tabcontent");
+                for (i = 0; i < tabcontent.length; i++) {
+                    tabcontent[i].style.display = "none";
+                }
+                tablinks = document.getElementsByClassName("tablinks");
+                for (i = 0; i < tablinks.length; i++) {
+                    tablinks[i].className = tablinks[i].className.replace(" active", "");
+                }
+                document.getElementById(tabName).style.display = "block";
+                evt.currentTarget.className += " active";
+            }        
+        
+            /*document.getElementById("defaultTab").style.display = "none";*/
+
+            document.getElementById("defaultTab").click();
+
+            
+        </script>    
+            
+    </center></body>        
+</html>

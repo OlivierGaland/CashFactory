@@ -1,0 +1,193 @@
+<!--
+#######################################################################
+# File name : www/index.html
+# Author : Olivier Galand (31/12/2022)
+# Author email : galand.olivier.david@gmail.com
+# Project : CashFactory
+# Project repository : https://github.com/OlivierGaland/CashFactory
+# 
+# Webserver code
+#######################################################################
+-->
+<html>
+	<head>
+		<meta name="robots" content="noindex">
+		<!--<link rel="icon" type="image/png" href="pic/favicon.png" />-->
+		<link rel="stylesheet" type="text/css" href="css/theme.css">
+		<title>CashFactory</title>
+	</head>
+	<body><center>
+        <table class="base">
+			<tr>
+				<td class="top">
+					<div class="tab">
+						<table class="menu">
+							<tr><td><button type="button" class="tablinks" onclick="openTab(event, 'Bookmarks')" id="defaultTab">Bookmarks</button></td></tr>
+							<tr><td><button type="button" class="tablinks" onclick="openTab(event, 'Register')" id="factoryDefaultTab">Register</button></td></tr>
+							<tr><td><button type="button" class="tablinks" onclick="openTab(event, 'Install')">Install</button></td></tr>
+							<tr><td><button type="button" class="tablinks" onclick="openTab(event, 'FAQ')">FAQ</button></td></tr>
+							<tr><td><button type="button" class="tablinks" onclick="openTab(event, 'About')">About</button></td></tr>
+						</table>
+					</div>
+				</td>
+				<td class="top">
+					<div id="Bookmarks" class="tabcontent">
+                        <br>
+						<table class="table_info_nogrid">
+							<tr><td><button type="button" onclick="javascript:event.target.port=9000; window.open('/')">Portainer</button><button type="button" onclick="window.open('https://github.com/OlivierGaland/CashFactory')">Github</button></td></tr>
+							<tr><td><button type="button" onclick="window.open('https://earnapp.com/dashboard')">EarnApp</button>
+                                    <button type="button" onclick="window.open('https://dashboard.honeygain.com/')">Honeygain</button>
+                                    <button type="button" onclick="window.open('https://peer2profit.com/dashboard')">Peer2profit</button></td></tr>
+							<tr><td><button type="button" onclick="window.open('https://pawns.iproyal.com/')">IPRoyal Pawns</button>
+                                    <button type="button" onclick="window.open('https://packetstream.io/dashboard')">Packetstream</button></tr>
+							<tr><td><button type="button" onclick="window.open('https://income.spider.dev/dashboard')">Spider Income</button></td></tr>
+						</table>
+                    </div>
+					<div id="Register" class="tabcontent">
+                        <br>
+						<table class="table_text">
+                            <tr><td>
+                                <br>
+                                This is the list of applications supported (or to be supported) by this docker stack.<br><br>
+                                Please, as this software is free, consider using the register link below to create your account for each app, this will add you in my referral list and I will get a reward from this company.<br><br>
+                                This won't cost you anything and motivate me to maintain this software by adding new applications and providing support to customers.<br><br>
+                                Cheers,<br>
+                                Olivier Galand<br><br>
+                            </td></tr>
+						</table>                        
+						<table class="table_info">
+                            <tr>
+                                <th>App</th>
+                                <th>Supported</th>
+                                <th>Revenue</th>
+                                <th>Bandwidth</th>
+                                <th>GB Payout</th>
+                                <th></th>
+                            </tr>
+							<tr><td>EarnApp</td><td>Yes</td><td>5</td><td>3</td><td>$0.5</td><td><button type="button" onclick="window.open('https://earnapp.com/i/p34wpf4')">Register</button></td></tr>
+							<tr><td>Honeygain</td><td>Yes</td><td>5</td><td>5</td><td>$0.1</td><td><button type="button" onclick="window.open('https://r.honeygain.me/GALAN2C368')">Register</button></td></tr>
+							<tr><td>Peer2profit</td><td>Yes</td><td>3</td><td>1</td><td>$1</td><td><button type="button" onclick="window.open('https://peer2profit.com/r/164081436561ccd71d961f2/en')">Register</button></td></tr>
+							<tr><td>IPRoyal Pawns</td><td>Yes</td><td>1</td><td>1</td><td>$0.2</td><td><button type="button" onclick="window.open('https://iproyal.com/pawns?r=455236')">Register</button></td></tr>
+							<tr><td>Packetstream</td><td>Yes</td><td>1</td><td>2</td><td>$0.1</td><td><button type="button" onclick="window.open('https://packetstream.io/?psr=32GQ')">Register</button></td></tr>
+							<tr><td>Spider Income</td><td>Not yet</td><td>2</td><td>1</td><td>$1</td><td><button type="button" onclick="window.open('https://income.spider.dev/r/galan21l65')">Register</button></td></tr>
+						</table>
+						<table class="table_text">
+                            <tr><td>
+                                <br>
+                                Above figures were calculated in Jan 2022 and will possibly change in the future.<br><br>
+                                For instance some society are new on the market and may increase their bandwidth usage (and your revenue) with time.<br><br>
+                                Currently you can expect $30 to $40 revenue every month for a CashFactory stack running 24/7 for a very low memory/cpu/bandwidth use.<br><br>
+                            </td></tr>
+						</table>                        
+                    </div>
+					<div id="Install" class="tabcontent">
+                        <br>
+						<table class="table_text">
+                            <tr><td>
+                                <h1>Installation procedure :</h1><br><br>
+                                1) Install linux OS on your host machine.<br><br>
+                                2) Download CashFactory project from github : git clone https://github.com/OlivierGaland/CashFactory.git<br><br>
+                                3) Go into created directory : cd CashFactory<br><br>
+                                4) Run install script (Need to run it as sudo -supervisor-) : sudo ./setup.sh<br><br>
+                                5) Create an account for the app you want to use (5 app supported, see Register tab)<br><br>
+                                6) Update .env file with the account details<br><br>
+                                7) (Optional) If you don't want to use all app : comment or delete the corresponding section in docker-compose.yml<br><br>
+                                8) Special procedure for Earnapp : you will need to add your device id in the dashboard, to get the id use Portainer to open "exec console" on the Earnapp container and type : earnapp showid<br><br>
+                                <br><h1>Start/stop procedure :</h1><br><br>
+                                1) Start stack : sudo docker-compose up -d (in CashFactory directory)<br><br>
+                                2) Stop stack : sudo docker-compose down (in CashFactory directory)<br><br>
+                                <br><h1>Management :</h1><br><br>
+                                - Bookmarks for applications is available on a web interface on host (http server port 80)<br><br>
+                                - Docker management for container and applications command/log is available on a web interface (Portainer) on host (http server port 9000)<br><br>
+                            </td></tr>
+						</table>                        
+                    </div>
+					<div id="FAQ" class="tabcontent">
+                        <br>
+						<table class="table_text">
+                            <tr><td>
+                                <h3>What is this software ? Is it legal ?</h3>
+                                This software will run several micro-earning applications at once to maximize revenues, those application are routing/proxy that will use your connection to route traffic. In short you are selling your unused internet bandwidth using this app.
+                                This app will interface with registered companies that provide bandwidth service. Their customers are companies that do not want to invest in a datacenter to hold their commercial traffic and use this service. 
+                                <h3>How much I will earn ? How will I get paid ?</h3>
+                                It depends on your connection, but in my case I'm running this stack as an individual on my home internet connection, I estimate my revenues between $30-$40 every month, for a computer that is using less than 10W of electrical power.
+                                To get paid you will need to log on your account and ask for a payment (conditions depending on the corresponding app for minimal amount and payment method -usually paypal-).
+                                <h3>What is the currently supported hardware ?</h3>
+                                I developped it on a NUC-like box N3150 CPU, with 8Gb DDR3. OS is ubuntu 20.04 with latest docker server and docker-compose installed. Any amd64/x86 machine running Linux should be compatible. However more platform could be compatible, don't hesitate to drop a mail at galand.olivier.david@gmail.com if you successfully installed it on another setup not listed, I will maintain a compatibility list.<br>
+                                <h3>Is it ressource consuming ?</h3>
+                                Not really, memory used is less than 1Gb (close to 512Mb) and on a N3150 celeron, load average is around 0.17 (4.2% cpu usage), ressources used are mainly on internet bandwidth use, count a few gigabyte per day.
+                                <h3>Can I run several instance of the stack on my network ?</h3>
+                                It depends on the application policy, some allows 2 or more client on same IP, so you may have to disable some on the other stack you run. Keep in mind that what is interesting companies is the routing path : routing does not change on the same IP so you won't get much more revenue if your stacks run on the same ISP (IP). In short two stack won't double your revenues. 
+                                <h3>Is there a way to increase your revenue ?</h3>
+                                Best way is to have several ISP (for instance your regular internet provider and a 4G modem for your mobile phone), in this case you can run one stack per IP and possibly double (or more if you have more IPs) your revenues. There is no strong limitation on the number of ISP/IP you can use for your account (Only Honeygain cconcerned and limit is 10)
+                                <h3>How can I get support ?</h3>
+                                You can drop a mail to me or (prefered way) open an issue on the project github page, I will look at it as soon as possible to assess and possibly solve it. 
+                                <h3>I'm happy with the software and want to give you a reward, how can I do that ?</h3>
+                                The software is free. I get reward when a new user install it and use the register link I provide to set up his account on the supported applications. However you are welcome to send a tip, you can do it with paypal at my email adress : galand.olivier.david@gmail.com , thanks !<br><br>
+                            </td></tr>
+						</table>                        
+                    </div>                    
+					<div id="About" class="tabcontent">
+                        <br>
+						<table class="table_text">
+                            <tr><td>
+                                <h1>CashFactory</h1><br><br>
+                                Release : beta 0.1 (02/01/2022)<br><br>
+                                Author : Olivier Galand (contact : galand.olivier.david@gmail.com)<br><br>
+                                Project page and support : https://github.com/OlivierGaland/CashFactory<br><br>
+                                This product is free for use and may be copied and distributed freely in its original form.<br>
+                                Personal modifications are allowed for your personal use, but modified copy are not allowed for distribution.<br><br>
+                            </td></tr>
+						</table>                        
+                    </div>
+				</td>
+			</tr>
+		</table>
+		<script>
+            function setCookie(nom, valeur, expire, chemin, domaine, securite){
+                document.cookie = nom + ' = ' + escape(valeur) + '  ' +
+                    ((expire == undefined) ? '' : ('; expires = ' + expire.toGMTString())) +
+                    ((chemin == undefined) ? '' : ('; path = ' + chemin)) +
+                    ((domaine == undefined) ? '' : ('; domain = ' + domaine)) +
+                    ((securite == true) ? '; secure' : '');
+            }
+            function  getCookie(name) {
+                if(document.cookie.length == 0) return null;
+
+                var regSepCookie = new RegExp('(; )', 'g');
+                var cookies = document.cookie.split(regSepCookie);
+                for(var i = 0; i < cookies.length; i++) {
+                    var regInfo = new RegExp('=', 'g');
+                    var infos = cookies[i].split(regInfo);
+                    if(infos[0] == name) return unescape(infos[1]);
+                }
+                return null;
+            }            
+            function openTab(evt, tabName) {
+                var i, tabcontent, tablinks;
+                tabcontent = document.getElementsByClassName("tabcontent");
+                for (i = 0; i < tabcontent.length; i++) {
+                    tabcontent[i].style.display = "none";
+                }
+                tablinks = document.getElementsByClassName("tablinks");
+                for (i = 0; i < tablinks.length; i++) {
+                    tablinks[i].className = tablinks[i].className.replace(" active", "");
+                }
+                document.getElementById(tabName).style.display = "block";
+                evt.currentTarget.className += " active";
+            }        
+            
+            if (getCookie('InitialAccess') == null) {
+                document.getElementById("defaultTab").style.display = "none";
+                document.getElementById("factoryDefaultTab").click();
+                var dtExpire = new Date();
+                dtExpire.setTime(dtExpire.getTime() + 3600 * 1000 * 24 * 365);            
+                setCookie('InitialAccess', 'Done' , dtExpire, '/');
+            }
+            else {
+                document.getElementById("defaultTab").click();
+            }
+            
+        </script>    
+    </center></body>        
+</html>

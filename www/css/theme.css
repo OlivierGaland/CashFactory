@@ -1,0 +1,81 @@
+/*
+#######################################################################
+# File name : www/theme.css
+# Author : Olivier Galand (31/12/2022)
+# Author email : galand.olivier.david@gmail.com
+# Project : CashFactory
+# Project repository : https://github.com/OlivierGaland/CashFactory
+# 
+# Webserver theme
+#######################################################################
+*/
+
+/* 
+    https://htmlcolorcodes.com/fr/tableau-de-couleur/tableau-de-couleur-design-plat/ 
+    color0 : #D4E6F1
+    color1 : #7FB3D5
+    color2 : #2980B9
+    color3 : #1F618D
+    text : white
+    border : white
+
+*/
+
+body {
+    background-color: #D4E6F1;
+}
+
+
+th, td {
+    padding: 3px 10px;
+    text-align: center;
+    color: white;
+	font-family: Verdana;
+	font-weight: bold;
+}
+
+table {
+    border-collapse: collapse;
+    background-color: #7FB3D5;
+}
+
+table.base {
+    width: 1024px;
+    height: 860px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+table.menu { width: 180px; background-color: #7FB3D5; }
+div.tabcontent { width: 800px; display: none; }
+
+table.table_info,table.table_info_nogrid,table.table_text { width: 768px; background-color: #2980B9; border: 2px solid; color: white; }
+table.table_info td,th { border: 1px solid; }
+table.table_text td { text-align: left; }
+
+th {
+    height: 40px;
+    font-size: 18px;
+}
+
+td,th.subheader {
+    height: 28px;
+    font-size: 12px;
+    vertical-align: middle;
+}
+
+.top {vertical-align: top;}
+
+button {
+    background-color: #1F618D;
+	border: 2px solid;
+    border-radius: 25px;
+    color: white;
+    padding: 8px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+	margin: 10px 10px 10px 10px;
+}
+
