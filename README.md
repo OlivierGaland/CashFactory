@@ -58,6 +58,8 @@ Contact :
 - bugs/requests : this github page (section : Issue)
 - email : galand.olivier.david@gmail.com
  
-Web interface on port 80 screenshot :
+Web interface on port 80 (Quick links to dashboards) screenshot and Web interface on port 9000 (Portainer container):
 
 ![image](https://user-images.githubusercontent.com/26048157/147865719-519d33ce-7da2-4fa8-8a37-0d7254696fd5.png)
+![image](https://user-images.githubusercontent.com/26048157/147866347-595bfbad-fedf-48a1-8764-e52b6e06bfbe.png)
+
