@@ -1,7 +1,7 @@
 #!/bin/bash
 #######################################################################
 # File name : setup.sh
-# Author : Olivier Galand (31/12/2022)
+# Author : Olivier Galand (31/12/2021)
 # Author email : galand.olivier.david@gmail.com
 # Project : CashFactory
 # Project repository : https://github.com/OlivierGaland/CashFactory
