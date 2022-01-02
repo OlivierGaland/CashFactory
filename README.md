@@ -13,18 +13,18 @@ Installation (you can open www/index.html file to have a more interactive instal
 - (Optional) If you don't want to use all app : comment or delete the corresponding section in docker-compose.yml
 - Special procedure for Earnapp : you will need to add your device id in the dashboard, to get the id use Portainer to open "exec console" on the Earnapp container and type : earnapp showid
 
-Registering section :
+Registering section and supported cash earning apps :
 
 This is the list of applications supported (or to be supported) by this docker stack.
 Please, as this software is free, consider using the register link below to create your account for each app, this will add you in my referral list and I will get a reward from this company.
 This won't cost you anything and motivate me to maintain this software by adding new applications and providing support to customers.
 
-- Earnapp : https://earnapp.com/i/p34wpf4
-- Honeygain : https://r.honeygain.me/GALAN2C368
-- Peer2profit : https://peer2profit.com/r/164081436561ccd71d961f2/en
-- IPRoyal Pawns : https://iproyal.com/pawns?r=455236
-- Packetstream : https://packetstream.io/?psr=32GQ
-- Spider Income : (not yet supported) https://income.spider.dev/r/galan21l65
+- Supported [Earnapp]https://earnapp.com/i/p34wpf4
+- Supported [Honeygain]https://r.honeygain.me/GALAN2C368
+- Supported [Peer2profit]https://peer2profit.com/r/164081436561ccd71d961f2/en
+- Supported [IPRoyal Pawns]https://iproyal.com/pawns?r=455236
+- Supported [Packetstream]https://packetstream.io/?psr=32GQ
+- Not yet supported [Spider Income]https://income.spider.dev/r/galan21l65
 
 Start/stop procedure :
 
