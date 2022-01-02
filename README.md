@@ -7,7 +7,7 @@ Installation (you can open www/index.html file to have a more interactive instal
 - Install linux OS on your host machine (a low consuming and cheap linux compatible box) 
 - Download CashFactory latest release : wget https://github.com/OlivierGaland/CashFactory/archive/refs/tags/v0.1.tar.gz , then uncompress : tar -xvf v0.1.tar.gz
 - Go into created directory : cd CashFactory-0.1
-- Run install script (Need to run it as sudo -supervisor-) : sudo ./setup.sh
+- Run install script (Need to run it as sudo -supervisor-) : chmod a+x ./setup.sh ; sudo ./setup.sh
 - Create an account for the app(s) you want to use (5 app supported : see Registering section below)
 - Update .env file with the account details
 - (Optional) If you don't want to use all app : comment or delete the corresponding section in docker-compose.yml
