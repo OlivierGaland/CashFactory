@@ -50,7 +50,7 @@ Compatibility :
 TODO list :
 
 - Add new applications when they appear (should be dockerizable to be elligible)
-- Do a compatibility list on user feedback / solve compatibility issue if possible
+- Do a compatibility list based on user feedback / solve compatibility issue if possible
 - Beta version : solve coming bugs
 
 Contact :
