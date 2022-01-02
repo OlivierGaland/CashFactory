@@ -19,12 +19,12 @@ This is the list of applications supported (or to be supported) by this docker s
 Please, as this software is free, consider using the register link below to create your account for each app, this will add you in my referral list and I will get a reward from this company.
 This won't cost you anything and motivate me to maintain this software by adding new applications and providing support to customers.
 
-- Supported [Earnapp]https://earnapp.com/i/p34wpf4
-- Supported [Honeygain]https://r.honeygain.me/GALAN2C368
-- Supported [Peer2profit]https://peer2profit.com/r/164081436561ccd71d961f2/en
-- Supported [IPRoyal Pawns]https://iproyal.com/pawns?r=455236
-- Supported [Packetstream]https://packetstream.io/?psr=32GQ
-- Not yet supported [Spider Income]https://income.spider.dev/r/galan21l65
+- Supported [Earnapp](https://earnapp.com/i/p34wpf4)
+- Supported [Honeygain](https://r.honeygain.me/GALAN2C368)
+- Supported [Peer2profit](https://peer2profit.com/r/164081436561ccd71d961f2/en)
+- Supported [IPRoyal Pawns](https://iproyal.com/pawns?r=455236)
+- Supported [Packetstream](https://packetstream.io/?psr=32GQ)
+- Not yet supported [Spider Income](https://income.spider.dev/r/galan21l65)
 
 Start/stop procedure :
 
@@ -38,16 +38,23 @@ Day to day management :
 
 License : 
 
-This product is free for use and may be copied and distributed freely in its original form.
-Personal modifications are allowed for your personal use, but modified copy are not allowed for distribution.
+- This product is free for use and may be copied and distributed freely in its original form.
+- Personal modifications are allowed for your personal use, but modified copy are not allowed for distribution.
+
+Compatibility :
+
+- Currently tested and running on a NUC computer with Ubuntu 20.04 server / docker 20.10.12 / docker-compose 1.25.0 ; hardware is N3150 celeron processor (4% load average), 8Gb memory (450 Mb used) and 120Gb disk (10 Gb used) 
+- Should be working on any x86/amd64 computer running Linux+docker with a very basic setup (low end CPU / 1Gb memory / 20Gb disk / 10Mb ethernet adapter)   
+- Other architecture not yet confirmed to be working (Windows / Mac / Raspberry)
 
 TODO list :
 
 - Add new applications when they appear (should be dockerizable to be elligible)
-- Do a compatibility list (currently very likely to run on any x86/amd64 computer with 20 Gb disk space, 512Mb to 1Gb memory and a low-end processor, 100/1000 network adapter prefered)
+- Do a compatibility list on user feedback / solve compatibility issue if possible
 - Beta version : solve coming bugs
- 
+
 Contact :
 
-- bugs/request : this github page
+- bugs/requests : this github page (section : Issue)
 - email : galand.olivier.david@gmail.com
+ 
