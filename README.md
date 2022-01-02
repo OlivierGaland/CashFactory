@@ -9,7 +9,7 @@ Installation (you can open www/index.html file to have a more interactive instal
 - Go into created directory : cd CashFactory-0.1
 - Run install script (Need to run it as sudo -supervisor-) : chmod a+x ./setup.sh ; sudo ./setup.sh
 - Create an account for the app(s) you want to use (5 app supported : see Registering section below)
-- Update .env file with the account details
+- Update .env file with the account details (put your account informations in defined environment variables)
 - (Optional) If you don't want to use all app : comment or delete the corresponding section in docker-compose.yml
 - Special procedure for Earnapp : you will need to add your device id in the dashboard, to get the id use Portainer to open "exec console" on the Earnapp container and type : earnapp showid
 
@@ -58,8 +58,8 @@ Contact :
 - bugs/requests : this github page (section : Issue or Discussion)
 - email : galand.olivier.david@gmail.com
  
-Web interface visible on port 80 (Quick links to dashboards) screenshot and Web interface on port 9000 (Portainer container):
+Web interface with quick links to dashboards on port 80 (uhttpd server) - first picture
+Web interface on port 9000 (Portainer container) - second picture
 
 ![image](https://user-images.githubusercontent.com/26048157/147865719-519d33ce-7da2-4fa8-8a37-0d7254696fd5.png)
 ![image](https://user-images.githubusercontent.com/26048157/147866347-595bfbad-fedf-48a1-8764-e52b6e06bfbe.png)
-
