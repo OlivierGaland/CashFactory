@@ -33,7 +33,7 @@ Start/stop procedure :
 
 Day to day management :
 
-- Bookmarks for applications is available on a web interface on host (http server port 80)
+- Bookmarks for applications is available on a web interface on host (http server port 80) !bug Portainer bookmark is not working use manually port 9000 to access
 - Docker management for container and applications command/log is available on a web interface (Portainer) on host (http server port 9000)
 
 License : 
@@ -58,3 +58,6 @@ Contact :
 - bugs/requests : this github page (section : Issue)
 - email : galand.olivier.david@gmail.com
  
+Web interface on port 80 screenshot :
+
+![image](https://user-images.githubusercontent.com/26048157/147865719-519d33ce-7da2-4fa8-8a37-0d7254696fd5.png)
