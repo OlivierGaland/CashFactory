@@ -4,7 +4,7 @@ Expected raw revenue is around $30-$40 per month (Jan 2022 estimation), 24/7 pow
 
 Installation (you can open www/index.html file to have a more interactive install section) :
 
-- Install linux OS on your host machine (a low consuming and cheap linux compatible box) 
+- Install linux OS on your host machine (a low consuming and cheap linux compatible box if you want a dedicated computer) or you can use an already set linux server running 24/7 as this software is very low ressources consuming. 
 - Download CashFactory latest release : wget https://github.com/OlivierGaland/CashFactory/archive/refs/tags/v0.2.tar.gz , then uncompress : tar -xvf v0.2.tar.gz
 - Go into created directory : cd CashFactory-0.2
 - Run install script (Need to run it as sudo -supervisor-) : sudo ./setup.sh
