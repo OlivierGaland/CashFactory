@@ -45,7 +45,8 @@ Compatibility :
 
 - Currently tested and running on a NUC computer with Ubuntu 20.04 server / docker 20.10.12 / docker-compose 1.25.0 ; hardware is N3150 celeron processor (4% load average), 8Gb memory (450 Mb used) and 120Gb disk (10 Gb used) 
 - Should be working on any x86/amd64 computer running Linux+docker with a very basic setup (low end CPU / 1Gb memory / 20Gb disk / 10Mb ethernet adapter)   
-- Other architecture not yet confirmed to be working (Windows / Mac / Raspberry)
+- Other architecture not yet confirmed to be working (Windows / Mac)
+- Confirmed actually not working on Raspberry
 
 TODO list :
 
