@@ -2,6 +2,8 @@
 Lightweight docker image stack (using docker-compose) running many passive income applications (proxy and bandwidth share) : Honeygain , EarnApp , IPRoyal Pawns , PacketStream , Peer2Profit . 
 Expected raw revenue is around $30-$40 per month (Jan 2022 estimation), 24/7 power cost to deduce.
 
+Those tools are using your computer to route traffic, I'm personnally using it running on two different ips (my home connection and my 4G backup connection). Those kind of ip are working well, but I believe this won't be the case on some ips (like vpn for instance). Keep in mind if you have several ip, you can run a stack on each ip to increase revenue, but running several time this stack on same ip should not give you more (and some tools supported won't allow it).
+
 Installation (you can open www/index.html file to have a more interactive install section) :
 
 - Install linux OS on your host machine (a low consuming and cheap linux compatible box if you want a dedicated computer) or you can use an already set linux server running 24/7 as this software is very low ressources consuming. 
