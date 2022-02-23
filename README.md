@@ -49,6 +49,8 @@ Compatibility :
 - Should be working on any x86/amd64 computer running Linux+docker with a very basic setup (low end CPU / 1Gb memory / 20Gb disk / 10Mb ethernet adapter)   
 - Other architecture not yet confirmed to be working (Windows / Mac)
 - Confirmed actually not working on Raspberry
+- Confirmed working on Synology NAS using VM (ubuntu 20.04 installed)
+- You may experience issues with earnapp if using debian : earnapp container exiting with error 255 (prefer using ubuntu 20.04)
 
 TODO list :
 
