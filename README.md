@@ -13,7 +13,7 @@ Installation (you can open www/index.html file to have a more interactive instal
 - Create an account for the app(s) you want to use (5 app supported : see Registering section below)
 - Update .env file with the account details (put your account informations in defined environment variables)
 - (Optional) If you don't want to use all app : comment or delete the corresponding section in docker-compose.yml
-- Special procedure for Earnapp : you will need to add your device id in the dashboard, to get the id use Portainer to open "exec console" on the Earnapp container and type : earnapp showid
+- Special procedure for Earnapp : you will need to add your device in the dashboard, to get the id use Portainer to open "exec console" on the Earnapp container (or through ssh enter: docker exec -it cashfactory_Earnapp_1 sh) and type : earnapp showid, to add the device you need to enter this link in your browser https://earnapp.com/r/your-id replacing "your-id" with the id you found earlier with show-id.
 
 Registering section and supported cash earning apps :
 
