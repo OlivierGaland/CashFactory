@@ -23,7 +23,7 @@ This won't cost you anything and motivate me to maintain this software by adding
 
 - Supported [Register Earnapp](https://earnapp.com/i/p34wpf4)
 - Supported [Register Honeygain](https://r.honeygain.me/GALAN2C368)
-- Supported [Register Peer2profit](https://peer2profit.com/r/164081436561ccd71d961f2/en)  /!\ domain change : use https://dashboard.peer2profit.app/dashboard for dashboard
+- Supported [Register Peer2profit](https://peer2profit.com/r/164081436561ccd71d961f2/en)
 - Supported [Register IPRoyal Pawns](https://iproyal.com/pawns?r=455236)
 - Supported [Register Packetstream](https://packetstream.io/?psr=32GQ)
 - Not yet supported [Register Spider Income](https://income.spider.dev/r/galan21l65) : linux version under dev (prerequisite for CashFactory implementation)
