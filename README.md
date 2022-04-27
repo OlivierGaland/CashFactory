@@ -7,8 +7,8 @@ Those tools are using your computer to route traffic, I'm personnally using it r
 Installation (you can open www/index.html file to have a more interactive install section) :
 
 - Install linux OS on your host machine (a low consuming and cheap linux compatible box if you want a dedicated computer) or you can use an already set linux server running 24/7 as this software is very low ressources consuming. 
-- Download CashFactory latest release : wget https://github.com/OlivierGaland/CashFactory/archive/refs/tags/v0.3.tar.gz , then uncompress : tar -xvf v0.3.tar.gz
-- Edit created directory name to CashFactory and cd inside : mv CashFactory-0.3 CashFactory ; cd CashFactory
+- Download CashFactory latest release : wget https://github.com/OlivierGaland/CashFactory/archive/refs/tags/v0.4.tar.gz , then uncompress : tar -xvf v0.4.tar.gz
+- Edit created directory name to CashFactory and cd inside : mv CashFactory-0.4 CashFactory ; cd CashFactory
 - Run install script (Need to run it as sudo -supervisor-) : sudo ./setup.sh
 - Create an account for the app(s) you want to use (5 app supported : see Registering section below)
 - Update .env file with the account details (put your account informations in defined environment variables)
@@ -23,7 +23,7 @@ This won't cost you anything and motivate me to maintain this software by adding
 
 - Supported [Register Earnapp](https://earnapp.com/i/p34wpf4)
 - Supported [Register Honeygain](https://r.honeygain.me/GALAN2C368)
-- Supported [Register Peer2profit](https://peer2profit.com/r/164081436561ccd71d961f2/en)
+- Supported [Register Peer2profit](https://p2pr.me/164081436561ccd71d961f2)
 - Supported [Register IPRoyal Pawns](https://iproyal.com/pawns?r=455236)
 - Supported [Register Packetstream](https://packetstream.io/?psr=32GQ)
 - Not yet supported [Register Spider Income](https://income.spider.dev/r/galan21l65) : linux version under dev (prerequisite for CashFactory implementation)
