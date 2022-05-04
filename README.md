@@ -26,7 +26,7 @@ This won't cost you anything and motivate me to maintain this software by adding
 - Supported [Register Peer2profit](https://p2pr.me/164081436561ccd71d961f2)
 - Supported [Register IPRoyal Pawns](https://iproyal.com/pawns?r=455236)
 - Supported [Register Packetstream](https://packetstream.io/?psr=32GQ)
-- Supported [Traffmonetizer](https://traffmonetizer.com/?aff=52057)
+- Supported [Register Traffmonetizer](https://traffmonetizer.com/?aff=52057)
 - Not yet supported [Register Spider Income](https://income.spider.dev/r/galan21l65) : linux version under dev (prerequisite for CashFactory implementation)
 
 Start/stop procedure :
