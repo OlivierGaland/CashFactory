@@ -7,10 +7,10 @@ Those tools are using your computer to route traffic, I'm personnally using it r
 Installation (you can open www/index.html file to have a more interactive install section) :
 
 - Install linux OS on your host machine (a low consuming and cheap linux compatible box if you want a dedicated computer) or you can use an already set linux server running 24/7 as this software is very low ressources consuming. 
-- Download CashFactory latest release : wget https://github.com/OlivierGaland/CashFactory/archive/refs/tags/v0.4.tar.gz , then uncompress : tar -xvf v0.4.tar.gz
-- Edit created directory name to CashFactory and cd inside : mv CashFactory-0.4 CashFactory ; cd CashFactory
+- Download CashFactory latest release : wget https://github.com/OlivierGaland/CashFactory/archive/refs/tags/v0.5.tar.gz , then uncompress : tar -xvf v0.5.tar.gz
+- Edit created directory name to CashFactory and cd inside : mv CashFactory-0.5 CashFactory ; cd CashFactory
 - Run install script (Need to run it as sudo -supervisor-) : sudo ./setup.sh
-- Create an account for the app(s) you want to use (5 app supported : see Registering section below)
+- Create an account for the app(s) you want to use (6 app supported : see Registering section below)
 - Update .env file with the account details (put your account informations in defined environment variables)
 - (Optional) If you don't want to use all app : comment or delete the corresponding section in docker-compose.yml
 - Special procedure for Earnapp : you will need to add your device in the dashboard, to get the id use Portainer to open "exec console" on the Earnapp container (or through ssh enter: docker exec -it cashfactory_Earnapp_1 sh) and type : earnapp showid, to add the device you need to enter this link in your browser https://earnapp.com/r/your-id replacing "your-id" with the id you found earlier with show-id.
@@ -26,8 +26,8 @@ This won't cost you anything and motivate me to maintain this software by adding
 - Supported [Register Peer2profit](https://p2pr.me/164081436561ccd71d961f2)
 - Supported [Register IPRoyal Pawns](https://iproyal.com/pawns?r=455236)
 - Supported [Register Packetstream](https://packetstream.io/?psr=32GQ)
+- Supported [Traffmonetizer](https://traffmonetizer.com/?aff=52057)
 - Not yet supported [Register Spider Income](https://income.spider.dev/r/galan21l65) : linux version under dev (prerequisite for CashFactory implementation)
-- Not yet supported [Traffmonetizer](https://traffmonetizer.com/?aff=52057) : currently no linux version (prerequisite for CashFactory implementation)
 
 Start/stop procedure :
 
@@ -37,6 +37,7 @@ Start/stop procedure :
 Day to day management :
 
 - Bookmarks for applications is available on a web interface on host (http server port 80)
+  Note if you install it on a machine already using port 80 (like a NAS for instance) you can change the Webserver port in docker-compose.yaml from "80:80" to "your_custom_port:80"
 - Docker management for container and applications command/log is available on a web interface (Portainer) on host (http server port 9000)
 
 License : 

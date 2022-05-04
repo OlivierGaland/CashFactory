@@ -133,6 +133,21 @@ services:
                 ipv4_address: 172.106.0.61
     #End of Packetstream section
 
+    #Start of TraffMonetizer section (remove this if TraffMonetizer not wanted)
+    # variables to define in .env file :
+    # TRAFFMONETIZER_TOKEN : Your application token (available in TraffMonetizer dashboard)
+    TraffMonetizer:
+        depends_on:
+            - Portainer
+            - Webserver
+        image: traffmonetizer/cli:latest
+        restart: always
+        command: start accept --token ${TRAFFMONETIZER_TOKEN}
+        networks:
+            default:
+                ipv4_address: 172.106.0.80
+    #End of Packetstream section    
+
 volumes:
     portainer_data:
     earnapp-data:
