@@ -36,8 +36,7 @@ Start/stop procedure :
 
 Day to day management :
 
-- Bookmarks for applications is available on a web interface on host (http server port 80)
-  Note if you install it on a machine already using port 80 (like a NAS for instance) you can change the Webserver port in docker-compose.yaml from "80:80" to "your_custom_port:80"
+- Bookmarks for applications is available on a web interface on host (http server port 80), if you install it on a machine already using port 80 (like a NAS for instance) you must change the Webserver port in docker-compose.yaml from "80:80" to "your_custom_port:80" or the entire stack will fail (as dependent on Webserver)
 - Docker management for container and applications command/log is available on a web interface (Portainer) on host (http server port 9000)
 
 License : 
