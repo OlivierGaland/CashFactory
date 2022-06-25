@@ -7,13 +7,14 @@ Those tools are using your computer to route traffic, I'm personnally using it r
 Installation (you can open www/index.html file to have a more interactive install section) :
 
 - Install linux OS on your host machine (a low consuming and cheap linux compatible box if you want a dedicated computer) or you can use an already set linux server running 24/7 as this software is very low ressources consuming. 
-- Download CashFactory latest release : wget https://github.com/OlivierGaland/CashFactory/archive/refs/tags/v0.5.tar.gz , then uncompress : tar -xvf v0.5.tar.gz
-- Edit created directory name to CashFactory and cd inside : mv CashFactory-0.5 CashFactory ; cd CashFactory
+- Download CashFactory latest release in $HOME directory : cd $HOME, then : wget https://github.com/OlivierGaland/CashFactory/archive/refs/tags/v1.0.tar.gz , then uncompress : tar -xvf v1.0.tar.gz
+- Edit created directory name to CashFactory and cd inside : mv CashFactory-1.0 CashFactory ; cd CashFactory
 - Run install script (Need to run it as sudo -supervisor-) : sudo ./setup.sh
-- Create an account for the app(s) you want to use (6 app supported : see Registering section below)
+- Create an account for the app(s) you want to use (7 app supported : see Registering section below)
 - Update .env file with the account details (put your account informations in defined environment variables)
 - (Optional) If you don't want to use all app : comment or delete the corresponding section in docker-compose.yml
 - Special procedure for Earnapp : you will need to add your device in the dashboard, to get the id use Portainer to open "exec console" on the Earnapp container (or through ssh enter: docker exec -it cashfactory_Earnapp_1 sh) and type : earnapp showid, to add the device you need to enter this link in your browser https://earnapp.com/r/your-id replacing "your-id" with the id you found earlier with show-id.
+- Special procedure for Bitping : you will need to enter manually credential to initialize (TODO : easiest way ?), in $HOME/CashFactory type : sudo docker run -it -v $HOME/CashFactory/data/bitping/:/root/.bitping bitping/bitping-node:latest , then enter your credential , once this is done CTL-C to end container
 
 Registering section and supported cash earning apps :
 
@@ -26,8 +27,9 @@ This won't cost you anything and motivate me to maintain this software by adding
 - Supported [Register Peer2profit](https://p2pr.me/164081436561ccd71d961f2)
 - Supported [Register IPRoyal Pawns](https://iproyal.com/pawns?r=455236)
 - Supported [Register Packetstream](https://packetstream.io/?psr=32GQ)
-- Supported [Traffmonetizer](https://traffmonetizer.com/?aff=52057)
-- Not yet supported [Register Spider Income](https://income.spider.dev/r/galan21l65) : linux version under dev (prerequisite for CashFactory implementation)
+- Supported [Register Traffmonetizer](https://traffmonetizer.com/?aff=52057)
+- Supported [Register Bitping](https://app.bitping.com?r=XLr65_of) : This tool only pay in crypto (BitcoinSV)
+- Not yet supported [Register Spider Income](https://income.spider.dev/r/galan21l65) : linux version under dev (prerequisite for CashFactory implementation). Warning : I get no income on this one since a few monthes
 
 Start/stop procedure :
 
@@ -50,6 +52,7 @@ Compatibility :
 - Currently tested and running on a NUC computer with Ubuntu 20.04 server / docker 20.10.12 / docker-compose 1.25.0 ; hardware is N3150 celeron processor (4% load average), 8Gb memory (450 Mb used) and 120Gb disk (10 Gb used) 
 - Should be working on any x86/amd64 computer running Linux+docker with a very basic setup (low end CPU / 1Gb memory / 20Gb disk / 10Mb ethernet adapter)   
 - Other architecture not yet confirmed to be working (Windows / Mac)
+- Confirmed working on ubuntu 20.04 server, 22.04 server 
 - Confirmed actually not working on Raspberry
 - Confirmed working on Synology NAS using VM (ubuntu 20.04 installed)
 - You may experience issues with earnapp if using debian : earnapp container exiting with error 255 (prefer using ubuntu 20.04)

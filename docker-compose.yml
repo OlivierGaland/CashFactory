@@ -39,20 +39,27 @@ services:
     #End of Portainer + Webserver section
 
     #Start of Earnapp section (remove this if Earnapp not wanted)
+    # variables to define in .env file :
+    # EARNAPP_DEVICE_ID : Your node id : sdk-node-<md5sum>
+    #                     <md5sum> is a 32 char string containing a-z and 0-9 range : 
+    #                       ex : Easy way to generate one :  echo "random string" | md5sum 
+    #                            This will print 9f33ffbb8a9dcedb28ea909775a6b0d3  -
+    #                            In that case use : sdk-node-9f33ffbb8a9dcedb28ea909775a6b0d3
     Earnapp:
         depends_on:
             - Portainer
             - Webserver
-        image: fazalfarhan01/earnapp
+        image: fazalfarhan01/earnapp:lite
         volumes:
-            - /sys/fs/cgroup:/sys/fs/cgroup:ro
             - earnapp-data:/etc/earnapp
-        privileged: true
         restart: always
+        environment:
+            - EARNAPP_UUID=$EARNAPP_DEVICE_ID
         networks:
             default:
                 ipv4_address: 172.106.0.20
     #End of Earnapp section
+
 
     #Start of HoneyGain section (remove this if HoneyGain not wanted)
     # variables to define in .env file :
@@ -132,6 +139,20 @@ services:
             default:
                 ipv4_address: 172.106.0.61
     #End of Packetstream section
+    
+    #Start of Bitping section (remove this if Bitping not wanted)
+    Bitping:
+        depends_on:
+            - Portainer
+            - Webserver
+        image: bitping/bitping-node:latest
+        restart: always
+        volumes:
+            - ./data/bitping:/root/.bitping
+        networks:
+            default:
+                ipv4_address: 172.106.0.70
+    #End of Bitping section     
 
     #Start of TraffMonetizer section (remove this if TraffMonetizer not wanted)
     # variables to define in .env file :
@@ -146,7 +167,7 @@ services:
         networks:
             default:
                 ipv4_address: 172.106.0.80
-    #End of Packetstream section    
+    #End of Packetstream section   
 
 volumes:
     portainer_data:

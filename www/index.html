@@ -40,8 +40,9 @@
                                     <button type="button" onclick="window.open('https://dashboard.peer2profit.app/dashboard')">Peer2profit</button></td></tr>
 							<tr><td><button type="button" onclick="window.open('https://pawns.iproyal.com/')">IPRoyal Pawns</button>
                                     <button type="button" onclick="window.open('https://packetstream.io/dashboard')">Packetstream</button></td></tr>
-							<tr><td><button type="button" onclick="window.open('https://income.spider.dev/dashboard')">Spider Income</button>
+							<tr><td><button type="button" onclick="window.open('https://app.bitping.com/earnings')">Bitping</button>
                                     <button type="button" onclick="window.open('https://app.traffmonetizer.com/dashboard')">Traffmonetizer</button></td></tr>
+							<tr><td><button type="button" onclick="window.open('https://income.spider.dev/dashboard')">Spider Income</button></button></td></tr>
 						</table>
                     </div>
 					<div id="Register" class="tabcontent">
@@ -71,7 +72,8 @@
 							<tr><td>IPRoyal Pawns</td><td>Yes</td><td>2</td><td>1</td><td>$0.2</td><td><button type="button" onclick="window.open('https://iproyal.com/pawns?r=455236')">Register</button></td></tr>
 							<tr><td>Packetstream</td><td>Yes</td><td>2</td><td>2</td><td>$0.1</td><td><button type="button" onclick="window.open('https://packetstream.io/?psr=32GQ')">Register</button></td></tr>
 							<tr><td>Traffmonetizer</td><td>Yes</td><td>1</td><td>1</td><td>$0.1</td><td><button type="button" onclick="window.open('https://traffmonetizer.com/?aff=52057')">Register</button></td></tr>
-							<tr><td>Spider Income</td><td>Not yet</td><td>1</td><td>1</td><td>$1</td><td><button type="button" onclick="window.open('https://income.spider.dev/r/galan21l65')">Register</button></td></tr>
+							<tr><td>Bitping</td><td>Yes</td><td>1</td><td>1</td><td>NA</td><td><button type="button" onclick="window.open('https://app.bitping.com?r=XLr65_of')">Register</button></td></tr>
+							<tr><td>Spider Income</td><td>Not yet</td><td>0</td><td>1</td><td>$1</td><td><button type="button" onclick="window.open('https://income.spider.dev/r/galan21l65')">Register</button></td></tr>
 						</table>
 						<table class="table_text">
                             <tr><td>
@@ -95,6 +97,7 @@
                                 6) Update .env file with the account details<br><br>
                                 7) (Optional) If you don't want to use all app : comment or delete the corresponding section in docker-compose.yml<br><br>
                                 8) Special procedure for Earnapp : you will need to add your device id in the dashboard, to get the id use Portainer to open "exec console" on the Earnapp container and type : earnapp showid<br><br>
+                                9) Special procedure for Bitping : launch container manually in interactive mode to enter your credential, then exit : sudo docker run -it -v $HOME/CashFactory/data/bitping/:/root/.bitping bitping/bitping-node:latest<br><br>
                                 <br><h1>Start/stop procedure :</h1><br><br>
                                 1) Start stack : sudo docker-compose up -d (in CashFactory directory)<br><br>
                                 2) Stop stack : sudo docker-compose down (in CashFactory directory)<br><br>
@@ -134,7 +137,7 @@
 						<table class="table_text">
                             <tr><td>
                                 <h1>CashFactory</h1><br><br>
-                                Release : beta 0.5 (04/05/2022)<br><br>
+                                Release : 1.0 (25/06/2022)<br><br>
                                 Author : Olivier Galand (contact : galand.olivier.david@gmail.com)<br><br>
                                 Project page and support : https://github.com/OlivierGaland/CashFactory<br><br>
                                 This product is free for use and may be copied and distributed freely in its original form.<br>
