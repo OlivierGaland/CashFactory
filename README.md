@@ -22,14 +22,14 @@ This is the list of applications supported (or to be supported) by this docker s
 Please, as this software is free, consider using the register link below to create your account for each app, this will add you in my referral list and I will get a reward from this company.
 This won't cost you anything and motivate me to maintain this software by adding new applications and providing support to customers.
 
-- Supported [Register Earnapp](https://earnapp.com/i/p34wpf4)
-- Supported [Register Honeygain](https://r.honeygain.me/GALAN2C368)
-- Supported [Register Peer2profit](https://p2pr.me/164081436561ccd71d961f2)
-- Supported [Register IPRoyal Pawns](https://iproyal.com/pawns?r=455236)
-- Supported [Register Packetstream](https://packetstream.io/?psr=32GQ)
-- Supported [Register Traffmonetizer](https://traffmonetizer.com/?aff=52057)
-- Supported [Register Bitping](https://app.bitping.com?r=XLr65_of) : This tool only pay in crypto (BitcoinSV)
-- Not yet supported [Register Spider Income](https://income.spider.dev/r/galan21l65) : linux version under dev (prerequisite for CashFactory implementation). Warning : I get no income on this one since a few monthes
+- Supported [Register Earnapp](https://earnapp.com/i/r4dq8vh)
+- Supported [Register Honeygain](https://r.honeygain.me/KISS9C330F)
+- Supported [Register Peer2profit](https://p2pr.me/165527735062a987265be7a)
+- Supported [Register IPRoyal Pawns](https://iproyal.com/pawns?r=751142)
+- Supported [Register Packetstream](https://packetstream.io/?psr=3r3X)
+- Supported [Register Traffmonetizer](https://traffmonetizer.com/?aff=320477)
+- Supported [Register Bitping](https://app.bitping.com?r=iat9UhWQ) : This tool only pay in crypto (BitcoinSV)
+- Not yet supported [Register Spider Income](https://income.spider.dev/r/kiss9ccm51) : linux version under dev (prerequisite for CashFactory implementation). Warning : I get no income on this one since a few monthes
 
 Start/stop procedure :
 
