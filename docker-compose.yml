@@ -87,7 +87,7 @@ services:
         depends_on:
             - Portainer
             - Webserver
-        image: iproyalpawns/pawns-cli:latest
+        image: iproyal/pawns-cli:latest
         command: -email=$IPROYALPAWNS_EMAIL -password='$IPROYALPAWNS_PASSWD' -device-name=$DEVICE_NAME -accept-tos
         restart: always
         networks:
