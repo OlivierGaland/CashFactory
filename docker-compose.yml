@@ -168,6 +168,24 @@ services:
             default:
                 ipv4_address: 172.106.0.80
     #End of Packetstream section   
+    
+    #Start of Repocket section (remove this if Repocket not wanted)
+    # variables to define in .env file :
+    # RP_EMAIL : Your application mail 
+    # RP_PASSWORD : Your application password
+    Repocket:
+        depends_on:
+            - Portainer
+            - Webserver
+        image: repocket/repocket:latest
+        restart: always
+        environment:
+          - RP_EMAIL
+          - RP_PASSWORD
+        networks:
+            default:
+                ipv4_address: 172.106.0.90
+    #End of Repocket section      
 
 volumes:
     portainer_data:

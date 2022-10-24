@@ -7,10 +7,10 @@ Those tools are using your computer to route traffic, I'm personnally using it r
 Installation (you can open www/index.html file to have a more interactive install section) :
 
 - Install linux OS on your host machine (a low consuming and cheap linux compatible box if you want a dedicated computer) or you can use an already set linux server running 24/7 as this software is very low ressources consuming. 
-- Download CashFactory latest release in $HOME directory : cd $HOME, then : wget https://github.com/OlivierGaland/CashFactory/archive/refs/tags/v1.1.tar.gz , then uncompress : tar -xvf v1.1.tar.gz
-- Edit created directory name to CashFactory and cd inside : mv CashFactory-1.1 CashFactory ; cd CashFactory
+- Download CashFactory latest release in $HOME directory : cd $HOME, then : wget https://github.com/OlivierGaland/CashFactory/archive/refs/tags/v1.2.tar.gz , then uncompress : tar -xvf v1.2.tar.gz
+- Edit created directory name to CashFactory and cd inside : mv CashFactory-1.2 CashFactory ; cd CashFactory
 - Run install script (Need to run it as sudo -supervisor-) : sudo ./setup.sh
-- Create an account for the app(s) you want to use (7 app supported : see Registering section below)
+- Create an account for the app(s) you want to use (8 app supported : see Registering section below)
 - Update .env file with the account details (put your account informations in defined environment variables)
 - (Optional) If you don't want to use all app : comment or delete the corresponding section in docker-compose.yml
 - Special procedure for Earnapp : you will need to add your device in the dashboard, to get the id use Portainer to open "exec console" on the Earnapp container (or through ssh enter: docker exec -it cashfactory_Earnapp_1 sh) and type : earnapp showid, to add the device you need to enter this link in your browser https://earnapp.com/r/your-id replacing "your-id" with the id you found earlier with show-id.
@@ -28,6 +28,7 @@ This won't cost you anything and motivate me to maintain this software by adding
 - Supported [Register IPRoyal Pawns](https://iproyal.com/pawns?r=455236)
 - Supported [Register Packetstream](https://packetstream.io/?psr=32GQ)
 - Supported [Register Traffmonetizer](https://traffmonetizer.com/?aff=52057)
+- Supported [Register Repocket](https://link.repocket.co/qtCj)
 - Supported [Register Bitping](https://app.bitping.com?r=XLr65_of) : This tool only pay in crypto (BitcoinSV)
 - Not yet supported [Register Proxyrack](https://peer.proxyrack.com/ref/08e43xzp6ixdutkxgwsf1vytiqbpcinvt2fge2lc) : Windows only.
 - Not yet supported [Register Spider Income](https://income.spider.dev/r/galan21l65) : linux version under dev (prerequisite for CashFactory implementation). Warning : I get no income on this one since a few monthes, never payed, suspected SCAM
