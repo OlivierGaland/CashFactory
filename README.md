@@ -72,5 +72,5 @@ Contact :
  
 Web interface with quick links to dashboards on port 80 (uhttpd server) and Web interface on port 9000 (Portainer container) below :
 
-![image](https://user-images.githubusercontent.com/26048157/147865719-519d33ce-7da2-4fa8-8a37-0d7254696fd5.png)
+![image](https://user-images.githubusercontent.com/26048157/197580191-28e02615-adea-4c75-baf2-6917fce92b29.png)
 ![image](https://user-images.githubusercontent.com/26048157/147866347-595bfbad-fedf-48a1-8764-e52b6e06bfbe.png)
