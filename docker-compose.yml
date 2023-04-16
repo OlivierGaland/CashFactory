@@ -172,7 +172,7 @@ services:
     #Start of Repocket section (remove this if Repocket not wanted)
     # variables to define in .env file :
     # RP_EMAIL : Your application mail 
-    # RP_PASSWORD : Your application password
+    # RP_API_KEY : Your application api key (available in repocket dashboard)
     Repocket:
         depends_on:
             - Portainer
@@ -181,7 +181,7 @@ services:
         restart: always
         environment:
           - RP_EMAIL
-          - RP_PASSWORD
+          - RP_API_KEY
         networks:
             default:
                 ipv4_address: 172.106.0.90
