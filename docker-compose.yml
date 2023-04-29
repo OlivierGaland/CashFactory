@@ -185,7 +185,41 @@ services:
         networks:
             default:
                 ipv4_address: 172.106.0.90
-    #End of Repocket section      
+    #End of Repocket section    
+
+    #Start of Proxylite section (remove this if Proxylite not wanted)
+    # variables to define in .env file :
+    # PROXYLITE_USER_ID : Your application use id (available in proxylite dashboard)
+    Proxylite:
+        depends_on:
+            - Portainer
+            - Webserver
+        image: proxylite/proxyservice:latest
+        restart: always
+        environment:
+          - USER_ID=$PROXYLITE_USER_ID
+        networks:
+            default:
+                ipv4_address: 172.106.0.100
+    #End of Proxylite section 
+
+    #Start of Proxyrack section (remove this if Proxyrack not wanted)
+    # variables to define in .env file :
+    # PROXYRACK_API_KEY : Your application api key (available in proxyrack dashboard -> profile -> generate API key (keep same for all devices))
+    Proxyrack:
+        depends_on:
+            - Portainer
+            - Webserver
+        image: proxyrack/pop:latest
+        restart: always
+        environment:
+          - api_key=$PROXYRACK_API_KEY
+          - device_name=$DEVICE_NAME
+        networks:
+            default:
+                ipv4_address: 172.106.0.110
+    #End of Proxyrack section 
+
 
 volumes:
     portainer_data:
