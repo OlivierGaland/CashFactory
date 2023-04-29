@@ -44,6 +44,7 @@ Day to day management :
 
 - Bookmarks for applications is available on a web interface on host (http server port 80), if you install it on a machine already using port 80 (like a NAS for instance) you must change the Webserver port in docker-compose.yaml from "80:80" to "your_custom_port:80" or the entire stack will fail (as dependent on Webserver)
 - Docker management for container and applications command/log is available on a web interface (Portainer) on host (http server port 9000). A basic knowledge of docker and docker-compose could also be helpfull (how to stop/star specific container, images policy, ssh on a container ...)
+- Container rebuild : In case you need to rebuild the image for a given app (like repocket only for instance ...), easiest way is to go on portainer interface, remove the container of this app (containers panel), then go on images panel and remove the image of the app (exact name can be found in docker-compose.yml). Once this done, just start stack again (sudo docker-compose up -d) : docker compose will just rebuild the removed image, container and start it without altering others apps. 
 
 License : 
 
