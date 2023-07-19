@@ -102,7 +102,7 @@ services:
         depends_on:
             - Portainer
             - Webserver
-        image: peer2profit/peer2profit_x86_64:latest
+        image: lyenliang/peer2profit_x86_64:latest
         restart: always
         environment:
             - P2P_EMAIL=$PEER2PROFIT_EMAIL
