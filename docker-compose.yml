@@ -102,10 +102,11 @@ services:
         depends_on:
             - Portainer
             - Webserver
-        image: lyenliang/peer2profit_x86_64:latest
+        image: enwaiax/peer2profit:latest
         restart: always
         environment:
-            - P2P_EMAIL=$PEER2PROFIT_EMAIL
+            - email=$PEER2PROFIT_EMAIL
+            - use_proxy=false
         networks:
             default:
                 ipv4_address: 172.106.0.50

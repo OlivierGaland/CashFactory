@@ -14,6 +14,7 @@ Installation (you can open www/index.html file to have a more interactive instal
 - Update .env file with the account details (put your account informations in defined environment variables)
 - (Optional) If you don't want to use all app : comment or delete the corresponding section in docker-compose.yml
 - Special procedure for Earnapp : you will need to add your device in the dashboard, to get the id use Portainer to open "exec console" on the Earnapp container (or through ssh enter: docker exec -it cashfactory_Earnapp_1 sh) and type : earnapp showid, to add the device you need to enter this link in your browser https://earnapp.com/r/your-id replacing "your-id" with the id you found earlier with show-id.
+- Special procedure for Peer2profit : registration is done using a telegram bot (you need to install telegram application)
 - Special procedure for Bitping : you will need to enter manually credential to initialize (TODO : easiest way ?), in $HOME/CashFactory type : sudo docker run -it -v $HOME/CashFactory/data/bitping/:/root/.bitping bitping/bitping-node:latest , then enter your credential , once this is done CTL-C to end container
 
 Registering section and supported cash earning apps :
@@ -24,7 +25,7 @@ This won't cost you anything and motivate me to maintain this software by adding
 
 - Supported [Register Earnapp](https://earnapp.com/i/p34wpf4)
 - Supported [Register Honeygain](https://r.honeygain.me/GALAN2C368)
-- Supported [Register Peer2profit](https://p2pr.me/164081436561ccd71d961f2)
+- Supported [Register Peer2profit](https://t.me/peer2profit_app_bot?start=164081436561ccd71d961f2) : Dashboard on telegram
 - Supported [Register IPRoyal Pawns](https://iproyal.com/pawns?r=455236)
 - Supported [Register Packetstream](https://packetstream.io/?psr=32GQ)
 - Supported [Register Traffmonetizer](https://traffmonetizer.com/?aff=52057)
@@ -32,8 +33,6 @@ This won't cost you anything and motivate me to maintain this software by adding
 - Supported [Register Proxylite](https://proxylite.ru/?r=S9LZAM24) : Russian app, payable with crypto for non russian citizens.
 - Supported [Register Bitping](https://app.bitping.com?r=XLr65_of) : This tool only pay in crypto (BitcoinSV)
 - Supported [Register Proxyrack](https://peer.proxyrack.com/ref/08e43xzp6ixdutkxgwsf1vytiqbpcinvt2fge2lc)
-- Not yet supported [Register Spider Income](https://income.spider.dev/r/galan21l65) : linux version under dev (prerequisite for CashFactory implementation). Warning : I get no income on this one since a few monthes, never payed, suspected SCAM
-
 
 Start/stop procedure :
 
