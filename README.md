@@ -16,6 +16,7 @@ Installation (you can open www/index.html file to have a more interactive instal
 - Special procedure for Earnapp : you will need to add your device in the dashboard, to get the id use Portainer to open "exec console" on the Earnapp container (or through ssh enter: docker exec -it cashfactory_Earnapp_1 sh) and type : earnapp showid, to add the device you need to enter this link in your browser https://earnapp.com/r/your-id replacing "your-id" with the id you found earlier with show-id.
 - Special procedure for Peer2profit : registration is done using a telegram bot (you need to install telegram application)
 - Special procedure for Bitping : you will need to enter manually credential to initialize (TODO : easiest way ?), in $HOME/CashFactory type : sudo docker run -it -v $HOME/CashFactory/data/bitping/:/root/.bitping bitping/bitping-node:latest , then enter your credential , once this is done CTL-C to end container
+- special procedure for Proxyrack : you will need to add your device uuid (see .env how to generate it) in the dashboard (dashboard -> devices -> add device)
 
 Registering section and supported cash earning apps :
 

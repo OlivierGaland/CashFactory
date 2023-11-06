@@ -206,7 +206,7 @@ services:
 
     #Start of Proxyrack section (remove this if Proxyrack not wanted)
     # variables to define in .env file :
-    # PROXYRACK_API_KEY : Your application api key (available in proxyrack dashboard -> profile -> generate API key (keep same for all devices))
+    # PROXYRACK_HOST_UUID : Your host UUID (random string), you can generate it using the command : cat /dev/urandom | LC_ALL=C tr -dc 'A-F0-9' | dd bs=1 count=64 2>/dev/null
     Proxyrack:
         depends_on:
             - Portainer
@@ -214,8 +214,7 @@ services:
         image: proxyrack/pop:latest
         restart: always
         environment:
-          - api_key=$PROXYRACK_API_KEY
-          - device_name=$DEVICE_NAME
+          - UUID=$PROXYRACK_HOST_UUID
         networks:
             default:
                 ipv4_address: 172.106.0.110
