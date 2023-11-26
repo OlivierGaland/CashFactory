@@ -132,7 +132,9 @@ services:
             - Webserver
             - Packetstream_PsClient
         image: containrrr/watchtower
-        command: --cleanup --include-stopped --revive-stopped --interval 60 ${_COMPOSE_PROJECT_NAME}_Packetstream_PsClient_${_COMPOSE_PROJECT_STACK_ID}
+        command: --cleanup --include-stopped --revive-stopped --interval 60 --scope PacketStream ${_COMPOSE_PROJECT_NAME}_Packetstream_PsClient_${_COMPOSE_PROJECT_STACK_ID}
+        labels:
+            - com.centurylinklabs.watchtower.scope=PacketStream
         volumes:
             - /var/run/docker.sock:/var/run/docker.sock
         restart: always
@@ -219,6 +221,50 @@ services:
             default:
                 ipv4_address: 172.106.0.110
     #End of Proxyrack section 
+
+
+    #Start of Cloudcollab section (remove if not wanted) => currently under evaluation by dev, seems not working well
+    # Cloudcollab:
+    #     depends_on:
+    #         - Portainer
+    #         - Webserver
+    #     image: cloudcollabapp/peer:latest
+    #     restart: always
+    #     networks:
+    #         default:
+    #             ipv4_address: 172.106.0.120
+    #End of Cloudcollab section
+
+    #Start of EarnFm section (remove this if EarnFm not wanted)
+    # variables to define in .env file :
+    # EARNFM_APIKEY : Your API key (available in earnfm dashboard -> more)
+    EarnFm_Client:
+        depends_on:
+            - Portainer
+            - Webserver
+        image: earnfm/earnfm-client:latest
+        restart: always
+        environment:
+            - EARNFM_TOKEN=$EARNFM_APIKEY
+        networks:
+            default:
+                ipv4_address: 172.106.0.130
+    EarnFm_Watchtower:
+        depends_on:
+            - Portainer
+            - Webserver
+            - EarnFm_Client
+        image: containrrr/watchtower
+        command: --cleanup --include-stopped --revive-stopped --interval 60 --scope EarnFm ${_COMPOSE_PROJECT_NAME}_EarnFm_Client_${_COMPOSE_PROJECT_STACK_ID}
+        labels:
+            - com.centurylinklabs.watchtower.scope=EarnFm
+        volumes:
+            - /var/run/docker.sock:/var/run/docker.sock
+        restart: always
+        networks:
+            default:
+                ipv4_address: 172.106.0.131
+    #End of EarnFm section
 
 
 volumes:

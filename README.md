@@ -34,6 +34,7 @@ This won't cost you anything and motivate me to maintain this software by adding
 - Supported [Register Proxylite](https://proxylite.ru/?r=S9LZAM24) : Russian app, payable with crypto for non russian citizens.
 - Supported [Register Bitping](https://app.bitping.com?r=XLr65_of) : This tool only pay in crypto (BitcoinSV)
 - Supported [Register Proxyrack](https://peer.proxyrack.com/ref/08e43xzp6ixdutkxgwsf1vytiqbpcinvt2fge2lc)
+- Supported [Register EarnFm](https://earn.fm/ref/OLIVPSSY)
 
 Start/stop procedure :
 
