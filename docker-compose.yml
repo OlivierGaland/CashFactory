@@ -49,7 +49,7 @@ services:
         depends_on:
             - Portainer
             - Webserver
-        image: fazalfarhan01/earnapp:lite
+        image: madereddy/earnapp:latest
         volumes:
             - earnapp-data:/etc/earnapp
         restart: always
