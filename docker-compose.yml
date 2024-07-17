@@ -14,15 +14,17 @@ services:
     # Web GUI with quicklinks to apps dashboards and help : connect to your device port 80 (Webserver)
     # Container management and monitoring : connect to your device port 9000 (Portainer)
     Webserver:
-        image: fnichol/uhttpd
+        image: busybox
+        command: sh -c "cp -R /app/* / && httpd -f -p 8000"
         volumes:
-            - ./www:/www
+            - ./www:/app
         ports:
-            - 80:80
+            - 80:8000
         restart: always
         networks:
             default:
                 ipv4_address: 172.106.0.10
+
     Portainer:
         image: portainer/portainer-ce:latest
         volumes:
